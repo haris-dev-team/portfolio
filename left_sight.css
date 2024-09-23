@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ffcc00 #f4f4f4;
+}
+
+body {
+  background-color: #dadadb;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffcc00;
+  border-radius: 20px;
+  border: 1px solid #f4f4f4;
+}
+.main__section {
+  display: flex;
+  gap: 10px;
+}
+
+.left__side__bar {
+  width: 20%;
+  height: 99.6vh;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.left__side__bar .main__left {
+  width: 100%;
+}
+
+.left__side__bar .img__container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.left__side__bar .img__container img {
+  width: 130px;
+}
+
+.left__side__bar .title__container {
+  text-align: center;
+}
+
+.left__side__bar .title__container h5 {
+  font-size: large;
+  font-weight: 550;
+}
+
+.left__side__bar .title__container p {
+  color: #989898;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left__side__bar .icon__container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.left__side__bar .icon__container div {
+  padding: 5px 8px;
+  border-radius: 50%;
+  background-color: #ffb400;
+}
+.left__side__bar .horizontal__line {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border: 1px solid #989898;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.left__side__bar .persnol__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.left__side__bar .persnol__container div {
+  display: flex;
+  justify-content: space-between;
+}
+.left__side__bar .persnol__container div h5 {
+  font-size: medium;
+  font-weight: 500;
+  background-color: #ffb400;
+  padding: 2px 5px;
+}
+.left__side__bar .persnol__container div .marry {
+  color: #7eb942;
+}
+.left__side__bar .language__container h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.left__side__bar .language__container .progress {
+  height: 5px;
+  padding: 1px;
+  border-color: #ffb400;
+  box-shadow: 0px 0px 10px #ffb400;
+  background: #fff;
+}
+.left__side__bar .language__container .language {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #767676;
+}
+.left__side__bar .language__container div h5 {
+  font-size: medium;
+  font-weight: 500;
+}
+.left__side__bar .skills__container h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.left__side__bar .skills__container .progress {
+  height: 5px;
+  padding: 1px;
+  border-color: #ffb400;
+  box-shadow: 0px 0px 10px #ffb400;
+  background: #fff;
+}
+.left__side__bar .skills__container .skills {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #767676;
+}
+.left__side__bar .skills__container div h5 {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.left__side__bar .button_container {
+  padding-bottom: 20px;
+}
+
+.left__side__bar .button_container button {
+  all: unset;
+  background-color: #ffb400;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+}
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 10px;
+}
+.administrative__container {
+  display: none;
+}
+
+.administrative__container .admin__flex {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.administrative__container .admin__flex p {
+  margin-left: 10px;
+  height: 40px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.admin {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 1081px) {
+  .left__side__bar {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    z-index: 1;
+  }
+
+  .left__side__bar {
+    transform: translateX(-100%);
+    width: 380px;
+  }
+
+  .left__side__bar.active {
+    transform: translateX(0);
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left__side__bar {
+    margin-top: 35px;
+  }
+}
