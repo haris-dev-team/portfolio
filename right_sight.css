@@ -27,7 +27,6 @@
   box-shadow: 0px 0px 20px rgb(182, 182, 182);
 }
 
-/* Tooltip styling */
 .icons__div::after {
   content: attr(title);
   position: absolute;

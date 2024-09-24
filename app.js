@@ -120,13 +120,6 @@ function showCenter1(active, icon) {
   if (active === "publication") {
     publication.style.display = "block";
     public__icon1.style.backgroundColor = "#ffb400";
-    sidebar.style.display = "none";
-    right__side.style.width = "8%";
-    center.style.width = "92%";
-  } else {
-    sidebar.style.display = "";
-    right__side.style.width = "";
-    center.style.width = "";
   }
 
   if (active === "books_award") {
@@ -144,30 +137,24 @@ function showCenter1(active, icon) {
 }
 
 function handleResize() {
-  if (activeSection === "publication") {
+  if (window.matchMedia("(max-width: 768px)").matches) {
     sidebar.style.display = "none";
-    right__side.style.width = "8%";
-    center.style.width = "92%";
+    right_sidebar.classList.add("active");
+    humburger1.style.display = "none";
+    humburger.style.display = "none";
+    right__side.style.width = "unset";
+  } else if (window.matchMedia("(max-width: 1081px)").matches) {
+    sidebar.style.display = "none";
+    right_sidebar.classList.add("active");
+    humburger.style.display = "flex";
+    humburger1.style.display = "none";
+    right__side.style.width = "unset";
   } else {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      sidebar.style.display = "none";
-      right_sidebar.classList.add("active");
-      humburger1.style.display = "flex";
-      humburger.style.display = "none";
-      right__side.style.width = "unset";
-    } else if (window.matchMedia("(max-width: 1081px)").matches) {
-      sidebar.style.display = "none";
-      right_sidebar.classList.add("active");
-      humburger.style.display = "flex";
-      humburger1.style.display = "none";
-      right__side.style.width = "unset";
-    } else {
-      sidebar.style.display = "flex";
-      right_sidebar.classList.remove("active");
-      humburger.style.display = "none";
-      humburger1.style.display = "none";
-      right__side.style.width = "unset";
-    }
+    sidebar.style.display = "flex";
+    right_sidebar.classList.remove("active");
+    humburger.style.display = "none";
+    humburger1.style.display = "none";
+    right__side.style.width = "unset";
   }
 
   icons.forEach((icon) => (icon.style.backgroundColor = "transparent"));

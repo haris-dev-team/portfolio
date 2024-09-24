@@ -274,36 +274,56 @@
 }
 
 .center__section .publication .table__container {
-  overflow-x: auto;
+  overflow: hidden;
 }
 
-.center__section .publication table {
+table {
+  width: 100%;
+  margin: 20px 0;
+}
+td {
   border: 1px solid #ffb400;
-  width: 96%;
 }
-.center__section .publication table thead tr {
-  border: 1px solid black;
-}
-.center__section .publication table thead tr td {
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 20px 10px;
   text-align: center;
-  padding: 30px 0px;
-  border: 1px solid black;
-  background-color: #ffb400;
-  width: 20%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  transition: all 0.3s ease;
 }
 
-.center__section .publication table tbody tr {
+th {
+  background-color: #f2b600;
+  color: white;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+  height: auto;
+  background-color: #ffeaa7;
+}
+
+tbody tr:hover td {
+  max-width: none;
+  white-space: normal;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ffb400;
 }
 
-.center__section .publication table tbody tr td {
-  border: 1px solid #ffb400;
-  width: 20%;
-  text-align: center;
-  padding: 40px 0px;
-  font-size: 18px;
+tbody tr.active {
+  height: auto;
+  background-color: #ffeaa7;
 }
-
 .center__section .book {
   width: 100%;
 }
