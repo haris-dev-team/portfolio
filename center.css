@@ -9,7 +9,7 @@
 .center__section #home .self__container {
   display: flex;
   justify-content: center;
-
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
   background-color: white;
   padding: 80px;
   padding-bottom: 40px;
@@ -52,6 +52,11 @@
   cursor: pointer;
   font-weight: 600;
   color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.center__section #home .self__container .inner__right__side button:hover {
+  box-shadow: 0px 0px 30px #f0b326;
 }
 
 .center__section #home .overview_conatiner {
@@ -59,6 +64,7 @@
   background-color: #fff;
   margin: 0px 20px;
   margin-top: 20px;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 
 .center__section #home .overview_conatiner h1 {
@@ -133,6 +139,7 @@
   width: 96%;
   background-color: #fff;
   margin: 0px 20px;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 .center__section #home .societies__container h1 {
   text-align: center;
@@ -151,12 +158,13 @@
 }
 .center__section .education h1 {
   text-align: center;
-  margin: 40px 0px;
+  margin: 80px 0px;
 }
 .center__section .education .education__container {
   width: 96%;
   margin: 0px 20px;
   background-color: #fff;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 
 .center__section .education .education__container .edu__flex {
@@ -203,6 +211,7 @@
 
 .card2 {
   width: 100%;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 
 .center__section .work {
@@ -211,13 +220,14 @@
 
 .center__section .work h1 {
   text-align: center;
-  margin: 35px 0px;
+  margin: 80px 0px;
 }
 
 .center__section .work .work__container {
   width: 96%;
   margin: 0px 20px;
   background-color: #fff;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 
 .center__section .work .work__container .work__flex {
@@ -253,17 +263,23 @@
 }
 
 .center__section .publication {
+  width: 96%;
   margin: 0px 20px;
+  overflow-x: auto;
 }
 
 .center__section .publication h1 {
   text-align: center;
-  margin: 20px 0px;
+  margin: 80px 0px;
+}
+
+.center__section .publication .table__container {
+  overflow-x: auto;
 }
 
 .center__section .publication table {
   border: 1px solid #ffb400;
-  width: 100%;
+  width: 96%;
 }
 .center__section .publication table thead tr {
   border: 1px solid black;
@@ -285,6 +301,7 @@
   width: 20%;
   text-align: center;
   padding: 40px 0px;
+  font-size: 18px;
 }
 
 .center__section .book {
@@ -293,7 +310,7 @@
 
 .center__section .book h1 {
   text-align: center;
-  margin: 20px 0px;
+  margin: 80px 0px;
 }
 .center__section .book .chapter__container {
   background-color: #fff;
@@ -308,22 +325,24 @@
 
 .center__section .container .award_col {
   padding: 30px 50px;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 
 .center__section .event h1 {
-  margin: 20px 0px;
+  margin: 80px 0px;
   text-align: center;
 }
 
 .center__section .event .event__main {
   width: 96%;
-  margin: 0px 25px;
+  margin: 0px 30px;
 }
 
 .center__section .event .event__main .event__container {
   padding: 20px 35px;
   background-color: #fff;
   margin: 20px 0px;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 .center__section .event .event__main .event__container h5 {
   color: #ffb400;

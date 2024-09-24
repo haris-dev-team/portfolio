@@ -35,6 +35,7 @@ body {
   overflow-x: hidden;
   padding-right: 20px;
   padding-left: 20px;
+  box-shadow: 0px 0px 20px rgb(185, 185, 185);
 }
 
 .left__side__bar .main__left {
@@ -160,6 +161,12 @@ body {
   width: 100%;
   text-align: center;
   padding: 10px 0px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.left__side__bar .button_container button:hover {
+  box-shadow: 0px 0px 30px #f0b326;
 }
 .hamburger {
   display: none;
@@ -217,12 +224,36 @@ body {
 
   .left__side__bar.active {
     transform: translateX(0);
-    display: flex;
+    display: flex !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .left__side__bar {
     margin-top: 35px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .hamburger1 {
+    display: flex;
+    z-index: 1000;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    box-shadow: none;
+  }
+
+  #humburger1 {
+    box-shadow: none;
+  }
+
+  .hamburger1 .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
   }
 }

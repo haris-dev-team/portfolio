@@ -31,6 +31,7 @@ var right__side = document.getElementById("right__side");
 
 var humburger = document.getElementById("humburger");
 var humburger1 = document.getElementById("humburger1");
+var right_sidebar = document.getElementById("right_sidebar");
 
 var center = document.getElementById("center");
 var icons = [
@@ -50,20 +51,22 @@ var icons1 = [
   events__icon1,
 ];
 
+var activeSection = "home";
+
 function showCenter(active, icon) {
+  activeSection = active;
   sections.forEach((section) => {
     section.style.display = "none";
   });
 
   icons.forEach((icon) => {
-    icon.style.backgroundColor = "#f0f0f6";
+    icon.style.backgroundColor = "transparent";
   });
 
-  if (icon === "home__icon")
-    if (active === "home") {
-      home.style.display = "block";
-      home__icon.style.backgroundColor = "#ffb400";
-    }
+  if (active === "home") {
+    home.style.display = "block";
+    home__icon.style.backgroundColor = "#ffb400";
+  }
   if (active === "education") {
     education.style.display = "block";
     edu__icon.style.backgroundColor = "#ffb400";
@@ -87,21 +90,21 @@ function showCenter(active, icon) {
 }
 
 function showCenter1(active, icon) {
+  activeSection = active;
   sections.forEach((section) => {
     section.style.display = "none";
   });
 
   icons1.forEach((icon) => {
-    icon.style.backgroundColor = "#f0f0f6";
+    icon.style.backgroundColor = "transparent";
   });
 
-  if (icon === "home__icon1")
-    if (active === "home") {
-      home.style.display = "block";
-      home__icon1.style.backgroundColor = "#ffb400";
-      administrative__container.style.display = "none";
-      skills.style.display = "block";
-    }
+  if (active === "home") {
+    home.style.display = "block";
+    home__icon1.style.backgroundColor = "#ffb400";
+    administrative__container.style.display = "none";
+    skills.style.display = "block";
+  }
   if (active === "education") {
     education.style.display = "block";
     edu__icon1.style.backgroundColor = "#ffb400";
@@ -117,12 +120,13 @@ function showCenter1(active, icon) {
   if (active === "publication") {
     publication.style.display = "block";
     public__icon1.style.backgroundColor = "#ffb400";
-    sidebar.classList.add("active1");
-    right__side.style.width = "5%";
-    center.style.width = "95%";
-  }
-  if (active !== "publication") {
-    sidebar.classList.remove("active1");
+    sidebar.style.display = "none";
+    right__side.style.width = "8%";
+    center.style.width = "92%";
+  } else {
+    sidebar.style.display = "";
+    right__side.style.width = "";
+    center.style.width = "";
   }
 
   if (active === "books_award") {
@@ -139,17 +143,79 @@ function showCenter1(active, icon) {
   }
 }
 
+function handleResize() {
+  if (activeSection === "publication") {
+    sidebar.style.display = "none";
+    right__side.style.width = "8%";
+    center.style.width = "92%";
+  } else {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      sidebar.style.display = "none";
+      right_sidebar.classList.add("active");
+      humburger1.style.display = "flex";
+      humburger.style.display = "none";
+      right__side.style.width = "unset";
+    } else if (window.matchMedia("(max-width: 1081px)").matches) {
+      sidebar.style.display = "none";
+      right_sidebar.classList.add("active");
+      humburger.style.display = "flex";
+      humburger1.style.display = "none";
+      right__side.style.width = "unset";
+    } else {
+      sidebar.style.display = "flex";
+      right_sidebar.classList.remove("active");
+      humburger.style.display = "none";
+      humburger1.style.display = "none";
+      right__side.style.width = "unset";
+    }
+  }
+
+  icons.forEach((icon) => (icon.style.backgroundColor = "transparent"));
+  icons1.forEach((icon) => (icon.style.backgroundColor = "transparent"));
+
+  updateActiveIcon();
+}
+
+function updateActiveIcon() {
+  if (activeSection === "home") {
+    home__icon.style.backgroundColor = "#ffb400";
+    home__icon1.style.backgroundColor = "#ffb400";
+  } else if (activeSection === "education") {
+    edu__icon.style.backgroundColor = "#ffb400";
+    edu__icon1.style.backgroundColor = "#ffb400";
+  } else if (activeSection === "work") {
+    work__icon.style.backgroundColor = "#ffb400";
+    work__icon1.style.backgroundColor = "#ffb400";
+  } else if (activeSection === "publication") {
+    public__icon.style.backgroundColor = "#ffb400";
+    public__icon1.style.backgroundColor = "#ffb400";
+  } else if (activeSection === "books_award") {
+    book__icon.style.backgroundColor = "#ffb400";
+    book__icon1.style.backgroundColor = "#ffb400";
+  } else if (activeSection === "events") {
+    events__icon.style.backgroundColor = "#ffb400";
+    events__icon1.style.backgroundColor = "#ffb400";
+  }
+}
+
+window.addEventListener("resize", handleResize);
 function toggleSidebar() {
   sidebar.classList.toggle("active");
+
+  if (sidebar.classList.contains("active")) {
+    humburger.style.display = "flex";
+  } else {
+    if (window.matchMedia("(max-width: 1081px)").matches) {
+      humburger.style.display = "flex";
+    } else if (window.matchMedia("(max-width: 768px)").matches) {
+      humburger1.style.display = "flex";
+    }
+  }
 }
 
 function onReload() {
-  home.style.display = "block";
-  education.style.display = "none";
-  work.style.display = "none";
-  publication.style.display = "none";
-  books_awards.style.display = "none";
-  events.style.display = "none";
+  activeSection = "home";
+  showCenter("home", "home__icon");
   home__icon.style.backgroundColor = "#ffb400";
   home__icon1.style.backgroundColor = "#ffb400";
 }
