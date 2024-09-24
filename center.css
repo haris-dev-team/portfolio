@@ -342,6 +342,71 @@ tbody tr.active {
   padding: 20px 35px;
   box-shadow: 5px 5px 5px rgb(195, 195, 195);
 }
+.book-content {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.book-content.expanded0 {
+  max-height: 500px;
+}
+.book-content.expanded1 {
+  max-height: 500px;
+}
+.book-content.expanded2 {
+  max-height: 500px;
+}
+.book-content.expanded3 {
+  max-height: 500px;
+}
+.book-content.expanded4 {
+  max-height: 500px;
+}
+.book-content.expanded5 {
+  max-height: 500px;
+}
+.award-content {
+  max-height: 50px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.award-content.expanded0 {
+  max-height: 500px; 
+}
+.award-content.expanded1 {
+  max-height: 500px; 
+}
+.award-content.expanded2 {
+  max-height: 500px; 
+}
+
+.read-more-award-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+.read-more-award-btn:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+.read-more-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
 
 .center__section .container .award_col {
   padding: 30px 50px;

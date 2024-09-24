@@ -199,6 +199,30 @@ function toggleSidebar() {
     }
   }
 }
+function toggleReadMore(id) {
+  const content = document.getElementById(`book-content${id}`);
+  const button = document.getElementById(`read-more-btn${id}`);
+
+  if (content.classList.contains(`expanded${id}`)) {
+    content.classList.remove(`expanded${id}`);
+    button.innerText = "Read More";
+  } else {
+    content.classList.add(`expanded${id}`);
+    button.innerText = "Read Less";
+  }
+}
+function toggleReadMoreAward(id) {
+  const content = document.getElementById(`award-content${id}`);
+  const button = document.getElementById(`read-more-award-btn${id}`);
+
+  if (content.classList.contains(`expanded${id}`)) {
+    content.classList.remove(`expanded${id}`);
+    button.innerText = "Read More";
+  } else {
+    content.classList.add(`expanded${id}`);
+    button.innerText = "Read Less";
+  }
+}
 
 function onReload() {
   activeSection = "home";
