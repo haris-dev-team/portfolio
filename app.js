@@ -30,7 +30,6 @@ var sidebar = document.getElementById("sidebar");
 var right__side = document.getElementById("right__side");
 
 var humburger = document.getElementById("humburger");
-var humburger1 = document.getElementById("humburger1");
 var right_sidebar = document.getElementById("right_sidebar");
 
 var center = document.getElementById("center");
@@ -135,34 +134,6 @@ function showCenter1(active, icon) {
     skills.style.display = "none";
   }
 }
-
-function handleResize() {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    sidebar.style.display = "none";
-    right_sidebar.classList.add("active");
-    humburger1.style.display = "none";
-    humburger.style.display = "none";
-    right__side.style.width = "unset";
-  } else if (window.matchMedia("(max-width: 1081px)").matches) {
-    sidebar.style.display = "none";
-    right_sidebar.classList.add("active");
-    humburger.style.display = "flex";
-    humburger1.style.display = "none";
-    right__side.style.width = "unset";
-  } else {
-    sidebar.style.display = "flex";
-    right_sidebar.classList.remove("active");
-    humburger.style.display = "none";
-    humburger1.style.display = "none";
-    right__side.style.width = "unset";
-  }
-
-  icons.forEach((icon) => (icon.style.backgroundColor = "transparent"));
-  icons1.forEach((icon) => (icon.style.backgroundColor = "transparent"));
-
-  updateActiveIcon();
-}
-
 function updateActiveIcon() {
   if (activeSection === "home") {
     home__icon.style.backgroundColor = "#ffb400";
@@ -185,20 +156,15 @@ function updateActiveIcon() {
   }
 }
 
-window.addEventListener("resize", handleResize);
-function toggleSidebar() {
-  sidebar.classList.toggle("active");
+function handleResize() {
+  icons.forEach((icon) => (icon.style.backgroundColor = "transparent"));
+  icons1.forEach((icon) => (icon.style.backgroundColor = "transparent"));
 
-  if (sidebar.classList.contains("active")) {
-    humburger.style.display = "flex";
-  } else {
-    if (window.matchMedia("(max-width: 1081px)").matches) {
-      humburger.style.display = "flex";
-    } else if (window.matchMedia("(max-width: 768px)").matches) {
-      humburger1.style.display = "flex";
-    }
-  }
+  updateActiveIcon();
 }
+
+window.addEventListener("resize", handleResize);
+
 function toggleReadMore(id) {
   const content = document.getElementById(`book-content${id}`);
   const button = document.getElementById(`read-more-btn${id}`);

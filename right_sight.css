@@ -18,6 +18,7 @@
   display: none;
 }
 .icons__div {
+  margin: 0px 20px;
   margin-top: 10px;
   position: relative;
   display: inline-block;
@@ -78,14 +79,14 @@
   }
   .icons__div__1 {
     border-radius: 20px;
-    padding: 12px 15px;
+    padding: 8px 12px;
     background-color: transparent;
     cursor: pointer;
     text-align: center;
     box-shadow: 0px 0px 10px rgb(182, 182, 182);
   }
   .icons__div__1 i {
-    font-size: 20px;
+    font-size: 15px;
     color: #333;
   }
 }
