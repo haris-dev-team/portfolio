@@ -15,7 +15,7 @@
   justify-content: center;
   box-shadow: 0px 0px 20px rgb(185, 185, 185);
   background-color: white;
-  padding: 80px;
+  padding: 40px;
   padding-bottom: 40px;
   align-items: center;
   margin: 0px 20px;
@@ -69,6 +69,7 @@
   margin: 0px 20px;
   margin-top: 20px;
   box-shadow: 0px 0px 20px rgb(185, 185, 185);
+  padding-bottom: 20px;
 }
 
 .center__section #home .overview_conatiner h1 {
@@ -83,60 +84,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px 25px;
-}
-.center__section #home .overview_conatiner .main .overview__left {
-  width: 50%;
-}
-
-.center__section
-  #home
-  .overview_conatiner
-  .main
-  .overview__left
-  .overview__left__inner {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0px;
-}
-
-.center__section
-  #home
-  .overview_conatiner
-  .main
-  .overview__left
-  .overview__left__inner
-  h5 {
-  font-weight: 500;
-  color: black;
-}
-
-.center__section #home .overview_conatiner .main .overview__right {
-  width: 50%;
-}
-
-.center__section
-  #home
-  .overview_conatiner
-  .main
-  .overview__right
-  .overview__right__inner {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0px;
-}
-
-.center__section
-  #home
-  .overview_conatiner
-  .main
-  .overview__right
-  .overview__right__inner
-  h5 {
-  font-weight: 500;
-  color: black;
+  margin: 10px 10px;
 }
 
 .center__section #home .societies__container {
@@ -180,11 +128,11 @@
 
 .center__section .education .education__container .edu__flex .left {
   width: 40%;
-  padding: 20px 20px;
+  padding: 5px 20px;
 }
 .center__section .education .education__container .edu__flex .right {
   width: 60%;
-  padding: 20px 20px;
+  padding: 5px 20px;
 }
 .center__section .education .education__container .line {
   margin: 20px 55px;
@@ -212,10 +160,18 @@
   width: 300px;
   height: 414px;
 }
-
+.card1 img {
+  height: 220px;
+  object-fit: cover;
+}
 .card2 {
   width: 100%;
+  height: 414px;
   box-shadow: 0px 0px 20px rgb(185, 185, 185);
+}
+.card2 img {
+  height: 220px;
+  object-fit: cover;
 }
 
 .center__section .work {
@@ -243,11 +199,11 @@
 
 .center__section .work .work__container .work__flex .left {
   width: 40%;
-  padding: 20px 20px;
+  padding: 5px 20px;
 }
 .center__section .work .work__container .work__flex .right {
   width: 60%;
-  padding: 20px 20px;
+  padding: 5px 20px;
 }
 .center__section .work .work__container .line {
   margin: 20px 55px;
@@ -268,7 +224,7 @@
 
 .center__section .publication {
   width: 96%;
-  margin: 0px 20px;
+  margin: 0px 15px;
   overflow-x: auto;
 }
 
@@ -282,7 +238,7 @@
 }
 
 table {
-  width: 100%;
+  width: 95%;
   margin: 20px 0;
   border: 1px solid #ffb400;
 }
@@ -290,16 +246,18 @@ table {
 tbody tr td {
   border: 1px solid #ffb400;
 }
+thead tr th {
+  border: 1px solid black;
+}
 
 th,
 td {
-  border: 1px solid #ffb400;
   padding: 30px 5px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 150px;
+  max-width: 100px;
   transition: all 0.3s ease;
 }
 
@@ -467,14 +425,17 @@ tbody tr.active {
     justify-content: center;
     align-items: center;
   }
-  .overview__left {
+  .center__section #home .self__container .inner__left__side {
     width: 100%;
   }
-  .overview__right {
+  .center__section #home .self__container .inner__right__side {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .overview_conatiner .main {
-    flex-direction: column;
+  .center__section #home .self__container .inner__right__side button {
+    text-align: center;
   }
   .societies__flex {
     flex-direction: column;
@@ -512,10 +473,36 @@ tbody tr.active {
     margin-top: 35px;
     width: 100%;
   }
-
+  .center__section #home .self__container .inner__left__side {
+    width: 100%;
+  }
+  .center__section #home .self__container .inner__right__side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .center__section #home .self__container .inner__right__side button {
+    text-align: center;
+  }
+  .center__section #home .self__container {
+    margin: 0px !important;
+  }
+  .center__section #home .overview_conatiner {
+    margin: 0px !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+  .center__section #home .societies__container {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .center__section .education .education__container {
+    width: 93%;
+  }
   .mobile_Home {
     display: flex;
-    margin: 0px 20px;
+    margin: 0px 0px;
     margin-top: 65px;
     margin-bottom: 20px;
     padding: 0px 10px;
@@ -611,6 +598,18 @@ tbody tr.active {
   .center__section #home .societies__container {
     width: 90%;
   }
+  .center__section #home .self__container .inner__left__side {
+    width: 100%;
+  }
+  .center__section #home .self__container .inner__right__side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .center__section #home .self__container .inner__right__side button {
+    text-align: center;
+  }
   .center__section #home .overview_conatiner {
     width: 90%;
     background-color: #fff;
@@ -631,6 +630,9 @@ tbody tr.active {
   }
   .small-view-1 {
     width: 100% !important;
+  }
+  .small-view-1 .h-75 {
+    height: 35px !important;
   }
   .mobile__left {
     width: 100% !important;
@@ -656,5 +658,38 @@ tbody tr.active {
   }
   .mobile_Home .image__container img {
     width: 150px !important;
+  }
+  .certificate__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .certificate__flex .col-sm-6 {
+    display: flex;
+    justify-content: center;
+  }
+  th,
+  td {
+    max-width: 50px;
+  }
+
+  tbody tr:hover {
+    height: auto;
+    background-color: #ffeaa7;
+  }
+
+  tbody tr:hover td {
+    max-width: 50px;
+    white-space: normal;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffb400;
+  }
+
+  tbody tr.active {
+    height: auto;
+    background-color: #ffeaa7;
   }
 }

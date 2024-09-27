@@ -4,6 +4,8 @@ var work = document.getElementById("work");
 var publication = document.getElementById("publication");
 var books_awards = document.getElementById("books_award");
 var events = document.getElementById("events");
+var  contact = document.getElementById("contact");
+
 
 var sections = [home, education, work, publication, books_awards, events];
 
@@ -13,13 +15,14 @@ var work__icon = document.getElementById("work__icon");
 var public__icon = document.getElementById("public__icon");
 var book__icon = document.getElementById("book__icon");
 var events__icon = document.getElementById("events__icon");
-
+var contact__icon = document.getElementById("contact__icon")
 var home__icon1 = document.getElementById("home__icon1");
 var edu__icon1 = document.getElementById("edu__icon1");
 var work__icon1 = document.getElementById("work__icon1");
 var public__icon1 = document.getElementById("public__icon1");
 var book__icon1 = document.getElementById("book__icon1");
 var events__icon1 = document.getElementById("events__icon1");
+var contact__icon1 = document.getElementById("contact__icon1");
 
 var skills = document.getElementById("skills");
 var administrative__container = document.getElementById(

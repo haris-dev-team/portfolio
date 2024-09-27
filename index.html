@@ -74,6 +74,13 @@
           >
             <i class="fa-solid fa-message"></i>
           </div>
+          <div
+            onclick="showCenter('contact','contact__icon')"
+            id="contact__icon"
+            class="icons__div__1"
+          >
+            <i class="fa-solid fa-message"></i>
+          </div>
         </div>
       </div>
 
@@ -288,18 +295,18 @@
                 <div
                   class="d-flex justify-content-between mx-2 my-1 align-items-center"
                 >
-                  <div class="pe-4 ps-2 py-1 bg-warning">
-                    <h5>Age:</h5>
+                  <div class="pe-4 ps-2 py-1 h-75 bg-warning">
+                    <p>Age:</p>
                   </div>
                   <div class="d-flex justify-content-center align-items-center">
-                    <h5 class="h-100">35</h5>
+                    <p class="h-100">35</p>
                   </div>
                 </div>
                 <div
                   class="d-flex justify-content-between mx-2 align-items-center my-1"
                 >
-                  <div class="pe-4 ps-2 py-1 bg-warning">
-                    <h5>Gender:</h5>
+                  <div class="pe-4 ps-2 h-75 py-1 bg-warning">
+                    <p>Gender:</p>
                   </div>
                   <div class="d-flex justify-content-center align-items-center">
                     <h5 class="h-100">Male</h5>
@@ -308,21 +315,21 @@
                 <div
                   class="d-flex justify-content-between mx-2 align-items-center my-1"
                 >
-                  <div class="pe-4 ps-2 py-1 bg-warning">
-                    <h5>Martial Status:</h5>
+                  <div class="pe-4 h-75 ps-2 py-1 bg-warning">
+                    <p>Martial Status:</p>
                   </div>
                   <div class="d-flex justify-content-center align-items-center">
-                    <h5 class="h-100 text-success">Married</h5>
+                    <p class="h-100 text-success">Married</p>
                   </div>
                 </div>
                 <div
                   class="d-flex justify-content-between mx-2 align-items-center my-1"
                 >
-                  <div class="pe-4 ps-2 py-1 bg-warning">
-                    <h5>Nationality:</h5>
+                  <div class="pe-4 h-75 ps-2 py-1 bg-warning">
+                    <p>Nationality:</p>
                   </div>
                   <div class="d-flex justify-content-center align-items-center">
-                    <h5 class="h-100">Indian</h5>
+                    <p class="h-100">Indian</p>
                   </div>
                 </div>
               </div>
@@ -397,57 +404,114 @@
           </div>
           <div class="overview_conatiner">
             <h1>Profile Overview</h1>
-            <div class="main">
-              <div class="overview__left">
-                <div class="overview__left__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>International Journals - 15</h5>
+
+            <div class="container">
+              <div class="row main">
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>International Journals - 15</h5>
+                  </div>
                 </div>
-                <div class="overview__left__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>SCI Indexed Journals - 03</h5>
-                </div>
-                <div class="overview__left__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Scopus Indexed Articles - 07</h5>
-                </div>
-                <div class="overview__left__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Technical Program Committee Member - 03</h5>
-                </div>
-                <div class="overview__left__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>NPTEL Certifications - 05</h5>
-                </div>
-                <div class="overview__left__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Book Chapters Authored - 08</h5>
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Reviewer in Journals - 02</h5>
+                  </div>
                 </div>
               </div>
-              <div class="overview__right">
-                <div class="overview__right__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Reviewer in Journals - 02</h5>
+              <div class="row main">
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>SCI Indexed Journals - 03</h5>
+                  </div>
                 </div>
-                <div class="overview__right__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Conference/Workshops Oragnized - 10</h5>
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Conference/Workshops Organized - 10</h5>
+                  </div>
                 </div>
-                <div class="overview__right__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Member of Proffesioanl Bodies - 03</h5>
+              </div>
+              <div class="row main">
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Scopus Indexed Articles - 07</h5>
+                  </div>
                 </div>
-                <div class="overview__right__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>FDP/STTP/Workshop Attend - 15</h5>
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Member of Professional Bodies - 03</h5>
+                  </div>
                 </div>
-                <div class="overview__right__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Projects Guided - 20</h5>
+              </div>
+              <div class="row main">
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Technical Program Committee Member - 03</h5>
+                  </div>
                 </div>
-                <div class="overview__right__inner">
-                  <i class="fa-solid fa-star"></i>
-                  <h5>Resource Person - 05</h5>
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>FDP/STTP/Workshop Attended - 15</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="row main">
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>NPTEL Certifications - 05</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Projects Guided - 20</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="row main">
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Book Chapters Authored - 08</h5>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex">
+                  <div class="col-sm-1">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="col-sm-11">
+                    <h5>Resource Person - 05</h5>
+                  </div>
                 </div>
               </div>
             </div>
@@ -597,11 +661,11 @@
             </div>
           </div>
           <h1>NPTEL CERTIFICATIONS</h1>
-          <div class="certificate__container container">
+          <div class="certificate__container">
             <div
               class="certificate__flex d-flex justify-content-center align-items-center row mx-5 my-2"
             >
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="card card2">
                   <img
                     src="./images/certificate1.png"
@@ -619,7 +683,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="card card2">
                   <img
                     src="./images/certificate2.png"
@@ -642,7 +706,7 @@
             <div
               class="certificate__flex d-flex justify-content-center align-items-center row mx-5 my-2"
             >
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="card card2">
                   <img
                     src="./images/certificate3.png"
@@ -660,7 +724,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="card card2">
                   <img
                     src="./images/certificate4.png"
@@ -1272,6 +1336,14 @@
             id="events__icon1"
             class="icons__div"
             title="Events"
+          >
+            <i class="fa-solid fa-message"></i>
+          </div>
+          <div
+            onclick="showCenter1('contact','contact__icon1')"
+            id="contact__icon1"
+            class="icons__div"
+            title="Contact"
           >
             <i class="fa-solid fa-message"></i>
           </div>
