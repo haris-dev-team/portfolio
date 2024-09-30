@@ -4,10 +4,17 @@ var work = document.getElementById("work");
 var publication = document.getElementById("publication");
 var books_awards = document.getElementById("books_award");
 var events = document.getElementById("events");
-var  contact = document.getElementById("contact");
+var contact = document.getElementById("contact");
 
-
-var sections = [home, education, work, publication, books_awards, events];
+var sections = [
+  home,
+  education,
+  work,
+  publication,
+  books_awards,
+  events,
+  contact,
+];
 
 var home__icon = document.getElementById("home__icon");
 var edu__icon = document.getElementById("edu__icon");
@@ -15,7 +22,7 @@ var work__icon = document.getElementById("work__icon");
 var public__icon = document.getElementById("public__icon");
 var book__icon = document.getElementById("book__icon");
 var events__icon = document.getElementById("events__icon");
-var contact__icon = document.getElementById("contact__icon")
+var contact__icon = document.getElementById("contact__icon");
 var home__icon1 = document.getElementById("home__icon1");
 var edu__icon1 = document.getElementById("edu__icon1");
 var work__icon1 = document.getElementById("work__icon1");
@@ -43,6 +50,7 @@ var icons = [
   public__icon,
   book__icon,
   events__icon,
+  contact__icon,
 ];
 var icons1 = [
   home__icon1,
@@ -51,9 +59,27 @@ var icons1 = [
   public__icon1,
   book__icon1,
   events__icon1,
+  contact__icon1,
 ];
 
 var activeSection = "home";
+
+function activateContact() {
+  activeSection = "contact";
+  sections.forEach((section) => {
+    section.style.display = "none";
+  });
+
+  icons.forEach((icon) => {
+    icon.style.backgroundColor = "transparent";
+  });
+
+  contact.style.display = "block";
+  contact__icon.style.backgroundColor = "#ffb400";
+  contact__icon1.style.backgroundColor = "#ffb400";
+  home__icon.style.backgroundColor = "transparent";
+  home__icon1.style.backgroundColor = "transparent";
+}
 
 function showCenter(active, icon) {
   activeSection = active;
@@ -88,6 +114,10 @@ function showCenter(active, icon) {
   if (active === "events") {
     events.style.display = "block";
     events__icon.style.backgroundColor = "#ffb400";
+  }
+  if (active === "contact") {
+    contact.style.display = "block";
+    contact__icon.style.backgroundColor = "#ffb400";
   }
 }
 
@@ -136,6 +166,10 @@ function showCenter1(active, icon) {
     administrative__container.style.display = "block";
     skills.style.display = "none";
   }
+  if (active === "contact") {
+    contact.style.display = "block";
+    contact__icon1.style.backgroundColor = "#ffb400";
+  }
 }
 function updateActiveIcon() {
   if (activeSection === "home") {
@@ -156,6 +190,9 @@ function updateActiveIcon() {
   } else if (activeSection === "events") {
     events__icon.style.backgroundColor = "#ffb400";
     events__icon1.style.backgroundColor = "#ffb400";
+  } else if (activeSection === "contact") {
+    contact__icon.style.backgroundColor = "#ffb400";
+    contact__icon1.style.backgroundColor = "#ffb400";
   }
 }
 

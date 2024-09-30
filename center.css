@@ -406,10 +406,47 @@ tbody tr.active {
 .active1 {
   display: none;
 }
+.center__section .contact h1 {
+  text-align: center;
+  margin: 55px 0px;
+}
+.center__section .contact .box {
+  margin: 20px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgb(177, 175, 175);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 96%;
+  gap: 10px;
+  padding: 20px 0px;
+}
+.center__section .contact .box .form__field {
+  all: unset;
+  width: 220px;
+  font-size: x-large;
+  padding: 0px 5px;
+  border: 1px solid #ffb400;
+  border-radius: 10px;
+}
+.center__section .contact .box button {
+  all: unset;
+  background-color: #ffb400;
+  width: 230px;
+  font-size: x-large;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+.center__section .contact .gap-3 div {
+  display: flex;
+  justify-content: center;
+}
 @media only screen and (max-width: 1081px) {
-  .center__section {
-    margin-top: 35px;
-  }
   .self__container {
     flex-direction: column;
   }
@@ -575,6 +612,12 @@ tbody tr.active {
   .mobile_Home .mobile__right button:hover {
     box-shadow: 0px 0px 30px #f0b326;
   }
+  .form__field {
+    width: 400px !important;
+  }
+  .contact button {
+    width: 400px !important;
+  }
 }
 @media only screen and (max-width: 576px) {
   .card1 {
@@ -691,5 +734,11 @@ tbody tr.active {
   tbody tr.active {
     height: auto;
     background-color: #ffeaa7;
+  }
+  .center__section .contact .box .form__field {
+    width: 220px !important;
+  }
+  .center__section .contact .box button {
+    width: 220px !important;
   }
 }
